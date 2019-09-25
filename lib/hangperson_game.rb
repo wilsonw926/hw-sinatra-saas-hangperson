@@ -24,6 +24,7 @@ class HangpersonGame
   # processes a guess and modifies the instance variables wrong_guesses and guesses accordingly
   def guess(letter)
     if letter == nil || !letter.match(/^[[:alpha:]]$/)
+      flash[:message]="Invalid guess."
       raise ArgumentError.new()
     end
     guess = letter.downcase

@@ -65,7 +65,7 @@ class HangpersonApp < Sinatra::Base
     if @game.check_win_or_lose == :win
       erb :win # You may change/remove this line
     else
-      redirect '/show'
+      redirect '/win'
     end
   end
   
